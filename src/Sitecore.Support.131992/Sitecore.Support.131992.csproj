@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,12 +41,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentArt.Web.UI, Version=2010.1.2637.35, Culture=neutral, PublicKeyToken=9bc9f846553156bb, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.ComponentArt.Web.UI.8.2.4\lib\ComponentArt.Web.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Client, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.Sitecore.Client.8.2.5\lib\Sitecore.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Sitecore.ContentSearch">
       <HintPath>..\packages\SC.Sitecore.ContentSearch.8.2.4\lib\Sitecore.ContentSearch.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.Sitecore.ContentSearch.Linq.8.2.4\lib\Sitecore.ContentSearch.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Sitecore.ContentSearch.SolrProvider">
       <HintPath>..\packages\SC.Sitecore.ContentSearch.SolrProvider.8.2.4\lib\Sitecore.ContentSearch.SolrProvider.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.ExperienceContentManagement.Administration, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.Sitecore.ExperienceContentManagement.Administration.8.2.4\lib\Sitecore.ExperienceContentManagement.Administration.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel">
@@ -61,10 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplyFieldMappingRule.cs" />
+    <Compile Include="LockedItemsPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\zzz\Sitecore.Support.131992.config" />
+    <Content Include="Sitecore\shell\Applications\WebEdit\Dialogs\LockedItems\LockedItems.xaml.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
