@@ -15,7 +15,7 @@ using System.Linq;
 
 namespace Sitecore.Support.Shell.Applications.WebEdit.Dialogs.LockedItems
 {
-    public class LockedItemsPage : ModalDialogPage
+    public class LockedItemsPage : Sitecore.Shell.Applications.WebEdit.Dialogs.LockedItems.LockedItemsPage
     {
         protected class LockedItem : SearchResultItem
         {
@@ -40,8 +40,6 @@ namespace Sitecore.Support.Shell.Applications.WebEdit.Dialogs.LockedItems
                 set;
             }
         }
-
-        protected Grid Items;
 
         protected override void OnLoad(EventArgs e)
         {
